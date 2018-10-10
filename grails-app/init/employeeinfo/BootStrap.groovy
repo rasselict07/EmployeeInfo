@@ -1,9 +1,9 @@
 package employeeinfo
 
+import com.employeeinfo.utility.Tools
 import grails.core.GrailsApplication
 
 class BootStrap {
-    private static final String SLASH = "/"
     GrailsApplication grailsApplication
 
     def init = { servletContext ->
@@ -23,7 +23,7 @@ class BootStrap {
 
             // Get the file name configuration file
             String fileName = grailsApplication.config.getProperty('app.filename')
-            def file = new File(fileDir + SLASH + fileName)
+            def file = new File(fileDir + Tools.SLASH + fileName)
 
             if (!file.exists()) {
                 // Then, write to file inside file directory
