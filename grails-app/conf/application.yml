@@ -84,7 +84,9 @@ grails:
 endpoints:
     jmx:
         unique-names: true
-
+app:
+  filedir: 'E:/Rassel'
+  filename: 'employee.json'
 ---
 hibernate:
     cache:
